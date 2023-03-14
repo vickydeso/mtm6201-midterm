@@ -19,31 +19,40 @@
     <title>Midterm</title>
 </head>
 <body>
-<!-- Navigation bar -->
-    <header class="header">
-        <!-- Logo -->
-        <a href="#"><img class="logo" src="images/logo.png"></a>
-        <!-- Menu -->
-        <nav class="nav">
-            <ul class="menu">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a> </li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-            </ul>
-        </nav>
+    <header>
+        <div class="header">
+            <!-- Logo -->
+            <a href="#"><img class="logo" src="images/logo.png"></a>
+
+            <!-- Hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+            <!-- Mobile Menu -->
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="#">About</a> </li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                </ul>
+            </nav>
+        </div>
         <h1>Give into your cravings.</h1>
     </header>
 
     <!-- Main content -->
     <main>
-        <div>
+        <div class="wrapper">
             <h2>What flavor profile would best suit you?</h2>
             <p>Based on your personality type, mood, and flavor preferences, we'll assign you a cake tailored just for you!</p>
             <button type="button">Take the test <i class='fas fa-angle-right'></i></button>
         </div>
         <div>
             <h1>Gallery</h1>
-            <img src="images/gallery/" alt="">
+            <div class="gallery wrapper">
+                <img src="images/gallery-1.jpg" alt="">
+                <img src="images/gallery-2.jpg" alt="">
+                <img src="images/gallery-3.jpg" alt="">
+            </div>
         </div>
     </main>
 
@@ -57,6 +66,7 @@
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-youtube-play"></a>
         </div>
+        <a href="#">Privacy Policy</a>
         <p>&copy; Positively Delicious</p>
     </footer>
 </body>
