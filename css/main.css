@@ -33,6 +33,10 @@ main {
   margin-right: auto;
 }
 
+/* ******************************************************************************** */
+/* ******************************** MOBILE VERSION ******************************** */
+/* ******************************************************************************** */
+
 /* ******* MENU ******* */
 .logo {
   display: inline-block;
@@ -164,4 +168,62 @@ footer img {
   font-size: 2rem;
   text-decoration: none;
   padding: 7px;
+}
+
+/* ******************************************************************************** */
+/* ******************************** TABLET VERSION ******************************** */
+/* ******************************************************************************** */
+@media (min-width: 768px) {
+
+}
+
+/* ********************************************************************************* */
+/* ******************************** DESKTOP VERSION ******************************** */
+/* ********************************************************************************* */
+@media (min-width: 992px) {
+  /* Logo */
+  .logo {
+    width: 5%;
+    height: 5%;
+  }
+
+  /* Navigation */
+  nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+    /* width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #ffdff0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    max-height: 0;
+    transition: max-height .5s ease-out; */
+  }
+  
+  nav ul li {
+    float: left;
+  }
+  
+  nav ul li a {
+    font-size: 1.75rem;
+    text-decoration: none;
+    display: block;
+    padding: 30px;
+    color: black;
+  }
+  
+  nav ul li a:hover {
+    background-color: transparent;
+  }
+  
+  /* Menu Icon */
+  .hamb{
+    display: none;
+  }
 }
