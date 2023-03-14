@@ -1,4 +1,9 @@
 /* BASIC FORMATTING */
+.wrapper {
+  padding: 20px;
+  width: 1200px;
+}
+
 p, a {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.25rem;
@@ -29,34 +34,120 @@ main {
 }
 
 /* ******* MENU ******* */
-.nav {
-  background-color: white;
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+  height: 15%;
+  padding: 5px;
 }
 
-.nav ul {
+.header {
+  background-color: rgb(236, 101, 101);
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #ffdff0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  max-height: 0;
+  transition: max-height .5s ease-out;
+}
+
+nav ul {
   padding: 0px;
   margin: 0px;
   text-align: center;
+  list-style-type: none;
   display:inline-block;
   vertical-align:top;
 }
 
-.nav ul li a {
+nav ul li a {
+  font-size: 1.75rem;
   text-decoration: none;
+  display: block;
+  padding: 30px;
+  color: black;
 }
 
-.logo {
-  display: inline-block;
-  vertical-align: top;
-  width: 4%;
-  height: 4%;
-  padding: 5px;
+nav ul li a:hover {
+  background-color: #ffcce6;
 }
 
+/* Menu Icon */
+.hamb{
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+}/* Style label tag */
 
+.hamb-line {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.hamb-line::before{
+  top: 5px;
+}
+
+.hamb-line::after{
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+  max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top:0;
+}
 
 /* ******* MAIN CONTENT ******* */
-
+.gallery img {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  width: 25%;
+  height: 25%;
+}
 
 
 /* ******* FOOTER ******* */
