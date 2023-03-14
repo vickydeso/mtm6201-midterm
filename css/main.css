@@ -1,7 +1,76 @@
-@media screen and (max-width:760px) {
-
+/* BASIC FORMATTING */
+p, a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.25rem;
 }
 
-@media screen and (min-width:760px) {
-    
+h1 {
+  font-family: 'Oleo Script Swash Caps', cursive;
+
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: 'Oleo Script Swash Caps', cursive;
+
+  font-size: 2rem;
+}
+
+main {
+  background-color: #FFCCE7;
+}
+
+/* Centers elements */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ******* MENU ******* */
+.nav {
+  background-color: white;
+}
+
+.nav ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.nav ul li a {
+  text-decoration: none;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 4%;
+  height: 4%;
+  padding: 5px;
+}
+
+
+
+/* ******* MAIN CONTENT ******* */
+
+
+
+/* ******* FOOTER ******* */
+footer img {
+  width: 20%;
+  height: 20%;
+}
+
+.socials {
+  text-align: center;
+}
+
+.socials a {
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 7px;
 }
