@@ -4,31 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Load an icon library -->
+    <!-- Icons stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+    <!-- Reset stylesheet -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>Midterm</title>
 </head>
 <body>
-    <header>
-        <div class="hero-img">
-            <div class="container">
-                <div class="hero-text">
-                    <h1>Give into your cravings.</h1>
-                    <nav>
-                        <svg></svg>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-fw fa-home"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                            <li><a href="#"><i class="fa fa-fw fa-envelope"></i></a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
+<!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="#"><img class="logo" src="images/logo.png"></a>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a> </li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+            </ul>
+        </nav>
+        <h1>Give into your cravings.</h1>
     </header>
+
+    <!-- Main content -->
     <main>
-        <h2>What flavor profile would best suit you?</h2>
+        <div>
+            <h2>What flavor profile would best suit you?</h2>
+            <p>Based on your personality type, mood, and flavor preferences, we'll assign you a cake tailored just for you!</p>
+            <button type="button">Take the test <i class='fas fa-angle-right'></i></button>
+        </div>
+        <div>
+            <h1>Gallery</h1>
+            <img src="images/gallery/" alt="">
+        </div>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <img src="images/footer-logo.png" class="center">
+        <!-- Social Media Icons -->
+        <div class="socials center">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube-play"></a>
+        </div>
+        <p>&copy; Positively Delicious</p>
+    </footer>
 </body>
 </html>
