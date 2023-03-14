@@ -43,7 +43,7 @@ main {
 }
 
 .header {
-  background-color: rgb(236, 101, 101);
+  background-color: rgb(255, 255, 255);
   position: sticky;
   top: 0;
   width: 100%;
@@ -90,7 +90,7 @@ nav ul li a:hover {
 }/* Style label tag */
 
 .hamb-line {
-  background: white;
+  background: #EE589F;
   display: block;
   height: 2px;
   position: relative;
@@ -100,7 +100,7 @@ nav ul li a:hover {
 
 .hamb-line::before,
 .hamb-line::after{
-  background: white;
+  background: #EE589F;
   content: '';
   display: block;
   height: 100%;
