@@ -1,25 +1,36 @@
 /* BASIC FORMATTING */
 .wrapper {
-  padding: 20px;
-  width: 1200px;
+  padding: 15px;
 }
 
 p, a {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+}
+
+button {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.1rem;
+  padding: 12px 17px 12px 17px;
+  border: none;
+  border-radius: 20px;
 }
 
 h1 {
   font-family: 'Oleo Script Swash Caps', cursive;
-
+  font-size: 2rem;
   font-weight: bold;
-  font-size: 4rem;
+}
+
+header h1 {
+  color: #4d1e1e;
 }
 
 h2 {
   font-family: 'Oleo Script Swash Caps', cursive;
-
-  font-size: 2rem;
+  color: #DC1F77;
+  font-size: 1.8rem;
 }
 
 main {
@@ -41,9 +52,9 @@ main {
 .logo {
   display: inline-block;
   vertical-align: top;
-  width: 15%;
-  height: 15%;
-  padding: 5px;
+  width: 10%;
+  height: 10%;
+  padding: 10px;
 }
 
 .header {
@@ -57,6 +68,7 @@ nav {
   width: 100%;
   height: 100%;
   position: fixed;
+  z-index: 1000;
   background-color: #ffdff0;
   overflow: hidden;
   display: flex;
@@ -87,23 +99,23 @@ nav ul li a:hover {
 }
 
 /* Menu Icon */
-.hamb{
+.hamb {
   cursor: pointer;
   float: right;
-  padding: 40px 20px;
+  padding: 40px 25px;
 }/* Style label tag */
 
 .hamb-line {
   background: #EE589F;
   display: block;
-  height: 2px;
+  height: 2.5px;
   position: relative;
-  width: 24px;
+  width: 30px;
 
 } /* Style span tag */
 
 .hamb-line::before,
-.hamb-line::after{
+.hamb-line::after {
   background: #EE589F;
   content: '';
   display: block;
@@ -113,12 +125,12 @@ nav ul li a:hover {
   width: 100%;
 }
 
-.hamb-line::before{
-  top: 5px;
+.hamb-line::before {
+  top: 10px;
 }
 
-.hamb-line::after{
-  top: -5px;
+.hamb-line::after {
+  top: -10px;
 }
 
 .side-menu {
@@ -126,7 +138,7 @@ nav ul li a:hover {
 } /* Hide checkbox */
 
 /* Toggle menu icon */
-.side-menu:checked ~ nav{
+.side-menu:checked ~ nav {
   max-height: 100%;
 }
 
@@ -144,7 +156,71 @@ nav ul li a:hover {
   top:0;
 }
 
+/* Banner */
+.hero {
+  height: 400px;
+  background-image: url("../images/hero-image.jpg");
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  padding: 50px;
+}
+
 /* ******* MAIN CONTENT ******* */
+.gradient {
+  top: 435px;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(rgba(255, 204, 231, 0), #FFCCE7);
+  z-index: -1;
+}
+
+/* Call To Action Section */
+.cta {
+  text-align: center;
+}
+
+.cta h2 {
+  padding: 25px 0 15px 0;
+}
+
+.cta p {
+  padding-bottom: 15px;
+}
+
+/* Gallery */
+.gallery h2 {
+  padding: 0 20px 0 0;
+  text-align: center;
+}
+
+/*center the heading and lines*/
+.pa-heading-line-both h2 {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+/*add and adjust the lines*/
+.pa-heading-line-both h2:before,
+.pa-heading-line-both h2:after {
+	content: '';
+	border-top: 2px solid;
+	margin: 0 20px 0 0;
+	flex: 1 0 20px;
+	color: #666666;
+}
+/*add spacing between heading and lines*/
+.pa-heading-line-both h2:after {
+	margin: 0 0 0 20px;
+}
+
 .gallery img {
   margin-left: auto;
   margin-right: auto;
@@ -153,11 +229,10 @@ nav ul li a:hover {
   height: 25%;
 }
 
-
 /* ******* FOOTER ******* */
 footer img {
-  width: 20%;
-  height: 20%;
+  width: 70%;
+  height: 70%;
 }
 
 .socials {
@@ -181,10 +256,29 @@ footer img {
 /* ******************************** DESKTOP VERSION ******************************** */
 /* ********************************************************************************* */
 @media (min-width: 992px) {
+  .wrapper {
+    max-width: 100%;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+    /* ******** Header ******** */
+    /* Banner */
+  .hero {
+    height: 900px;
+    background-image: url("../images/hero-image.jpg");
+    background-size: cover;
+  }
+
+  .hero h1 {
+    font-size: 7.5rem;
+    padding: 150px;
+  }
+  
   /* Logo */
   .logo {
-    width: 5%;
-    height: 5%;
+    width: 4%;
+    height: 4%;
   }
 
   /* Navigation */
@@ -195,15 +289,6 @@ footer img {
     float: right;
     width: fit-content;
     background-color: transparent;
-    /* width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: #ffdff0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    max-height: 0;
-    transition: max-height .5s ease-out; */
   }
   
   nav ul li {
@@ -225,5 +310,16 @@ footer img {
   /* Menu Icon */
   .hamb{
     display: none;
+  }
+
+  /* ******** Main Content ******** */
+  h2 {
+    font-size: 3rem;
+  }
+
+  /* ******** Footer ******** */
+  footer img {
+    width: 20%;
+    height: 20%;
   }
 }
