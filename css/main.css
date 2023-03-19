@@ -1,4 +1,4 @@
-/* BASIC FORMATTING */
+/* ******************* Basic Formatting ******************* */
 .wrapper {
   padding: 24px;
 }
@@ -14,9 +14,15 @@ p, a {
   background-color: white;
   color: black;
   margin-top: 15px;
-  padding: 12px 22px 10px 22px;
+  padding: 14px 22px 10px 22px;
   border-radius: 30px;
   text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.button:hover {
+  background: #DC1F77;
+  color: #ffffff;
 }
 
 h1 {
@@ -40,16 +46,27 @@ main {
   background-color: #FFCCE7;
 }
 
-/* ******************************************************************************** */
-/* ******************************** MOBILE VERSION ******************************** */
-/* ******************************************************************************** */
-/* ******* MENU ******* */
+.spacer {
+  background-color: white;
+  padding: 30px;
+}
+
+/* ************************************************************************************************************ */
+/* ********************************************** MOBILE VERSION ********************************************** */
+/* ************************************************************************************************************ */
+
+/* ******************************************** HEADER ******************************************** */
 .logo {
   display: inline-block;
   vertical-align: top;
   width: 10%;
   height: 10%;
   padding: 10px;
+  transition: all .2s ease-in-out; 
+}
+
+.logo:hover {
+  transform: scale(1.2);
 }
 
 .header {
@@ -63,8 +80,7 @@ nav {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 1000;
-  background-color: #ffdff0;
+  background-color: #EE589F;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -86,11 +102,12 @@ nav ul li a {
   text-decoration: none;
   display: block;
   padding: 30px;
-  color: black;
+  color: white;
+  transition: all .2s ease-in-out; 
 }
 
 nav ul li a:hover {
-  background-color: #ffcce6;
+  background-color: #DC1F77;
 }
 
 /* Menu Icon */
@@ -165,8 +182,9 @@ nav ul li a:hover {
   padding: 50px;
 }
 
-/* ******* MAIN CONTENT ******* */
-/* Call To Action Section */
+/* ******************************************** HOME PAGE: MAIN CONTENT ******************************************** */
+
+/* ******************* Call To Action Section ******************* */
 .cta {
   text-align: center;
   padding-top: 35px;
@@ -177,7 +195,38 @@ nav ul li a:hover {
   font-size: 1.8rem;
 }
 
-/* Gallery */
+.cta a {
+  animation: wiggle 2s linear 3.5s;
+}
+
+@keyframes wiggle {
+  0%, 5% {
+    transform: rotateZ(0);
+  }
+  10% {
+    transform: rotateZ(7deg);
+  }
+  15% {
+    transform: rotateZ(-7deg);
+  }
+  20% {
+    transform: rotateZ(3deg);
+  }
+  25% {
+    transform: rotateZ(-3deg);
+  }
+  30% {
+    transform: rotateZ(2deg);
+  }
+  35% {
+    transform: rotateZ(-1deg);
+  }
+  50%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+/* ******************* Gallery Section ******************* */
 .gallery {
   background-color: #ffa5d3;
   text-align: center;
@@ -194,6 +243,7 @@ nav ul li a:hover {
 .carousel {
   display: flex;
   animation: slide 16s infinite;
+  z-index: -1;
 }
 
 @keyframes slide {
@@ -224,7 +274,7 @@ nav ul li a:hover {
 }
 
 .gallery h2 {
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
 
 /*center the heading and lines*/
@@ -254,9 +304,10 @@ nav ul li a:hover {
   height: 100%;
 }
 
-/* Our Cakeries Section */
+/* ******************* Our Cakeries Section ******************* */
 .our-cakeries {
-  background-color:#f74e9d;
+  background-color:#edbcf5;
+  padding-top: 20px;
 }
 
 .our-cakeries-text {
@@ -269,7 +320,8 @@ nav ul li a:hover {
 }
 
 .our-cakeries h2 {
-  color: white;
+  color: #a638b9;
+  text-align: center;
 }
 
 .our-cakeries img {
@@ -277,10 +329,16 @@ nav ul li a:hover {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  padding-top: 25px;
+  border: 10px solid #ffffff;
+  border-radius: 8px;
 }
 
-/* Say Hello Section */
+/* ******************* Say Hello Section ******************* */
+.say-hello {
+  padding-top: 20px;
+  background-color: #f5e9ae;
+}
+
 .say-hello-text {
   padding: 30px 25px 0px 25px;
 }
@@ -290,15 +348,140 @@ nav ul li a:hover {
   text-align: center;
 }
 
+.say-hello h2 {
+  text-align: center;
+}
+
 .say-hello img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  border: 10px solid #ffffff;
+  border-radius: 8px;
+}
+
+/* ******************************************** ABOUT PAGE: MAIN CONTENT ******************************************** */
+
+/* ******************* Our Story Section ******************* */
+.our-story {
+  text-align: center;
+  padding-bottom: 60px;
+  background-color: #f5e9ae;
+}
+
+.our-story h1 {
+  color: #DC1F77;
+  font-size: 5rem;
+  padding: 20px 0 20px 0;
+}
+
+/* ******************* Founder Section ******************* */
+.founder {
+  text-align: center;
+}
+
+.founder h2 {
+  padding-top: 20px;
+}
+
+.founder img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border: 10px solid #ffffff;
+  border-radius: 8px;
+}
+
+/* ******************* Mission Section ******************* */
+.mission {
+  text-align: center;
+  background-color: #edbcf5;
+}
+
+.mission h2 {
+  padding-top: 20px;
+  color: #a638b9;
+}
+
+.mission img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border: 10px solid #ffffff;
+  border-radius: 8px;
+}
+
+/* ******************************************** CONTACT PAGE: MAIN CONTENT ******************************************** */
+
+/* ******************* Contact Info Card ******************* */
+.contact-info {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.contact-options i {
+  font-size: 4rem;
+  padding: 10px;
+  color: #DC1F77;
+}
+
+.contact-options li {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+
+iframe {
+  border-radius: 10px;
+  width: 100%;
   padding-top: 25px;
 }
 
-/* ******* FOOTER ******* */
+/* ******************* Contact Form ******************* */
+.contact-form {
+  background-color: #edbcf5;
+}
+
+.contact-form h2 {
+  color: #a638b9;
+  padding: 10px 0 25px 0;
+}
+
+.contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  background-color: #DC1F77;
+  color: #ffffff;
+  border: none;
+  padding: 14px 22px 10px 22px;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ******************************************** FOOTER ******************************************** */
 footer {
   background-color: #DC1F77;
 }
@@ -313,6 +496,7 @@ footer img {
 
 footer p, a {
   color: white;
+  text-decoration: none;
 }
 
 .footer-socials {
@@ -328,9 +512,9 @@ footer p, a {
   padding: 5px;
 }
 
-/* ********************************************************************************* */
-/* ******************************** DESKTOP VERSION ******************************** */
-/* ********************************************************************************* */
+/* ************************************************************************************************************* */
+/* ********************************************** DESKTOP VERSION ********************************************** */
+/* ************************************************************************************************************* */
 @media (min-width: 768px) {
   .wrapper {
     max-width: 100%;
