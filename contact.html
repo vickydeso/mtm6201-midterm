@@ -22,7 +22,7 @@
     <header>
         <div class="header">
             <!-- Logo -->
-            <a href="#"><img class="logo" src="images/logo.png" alt="Positively Delicious logo"></a>
+            <a href="index.html"><img class="logo" src="images/logo.png" alt="Positively Delicious logo"></a>
 
             <!-- Hamburger icon -->
             <input class="side-menu" type="checkbox" id="side-menu"/>
@@ -30,9 +30,9 @@
             <!-- Mobile Menu -->
             <nav class="nav">
                 <ul class="menu">
-                    <li><a href="#">FAQs</a> </li>
-                    <li><a href="#">About</a> </li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
                 </ul>
             </nav>
@@ -41,13 +41,45 @@
 
     <!-- Main content -->
     <main>
-        
+        <div class="contact-info wrapper">
+            <h2>Where to Find Us</h2>
+            <div class="contact-options">
+                <ul>
+                    <i class="fa fa-map-pin"></i><li>123 Sweet Street, Positivity Plaza, Sprinkleville, ON M5V 2M5</li>
+                    <i class="fa fa-phone"></i><li>416-555-1234</li>
+                    <i class="fa fa-envelope"></i><li>hello@positivelydelicious.ca</li>
+                </ul>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.9445518045054!2d-75.75712548447288!3d45.34993154908198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1679224686208!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="contact-form wrapper">
+            <h2>Get in Touch!</h2>
+            <form action="submit-form.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+              
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              
+                <button type="submit">Submit</button>
+              </form>
+        </div>
+        <div class="spacer"></div>
     </main>
 
     <!-- Footer -->
     <footer>
         <div class="wrapper">
-            <img src="images/footer-logo.png">
+            <img src="images/footer-logo.png" alt="Positively Delicious logo and slogan">
             <!-- Social Media Icons -->
             <div class="footer-socials">
                 <a href="#" class="fa fa-facebook"></a>
@@ -57,7 +89,7 @@
             </div>
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
-                <p>&copy; Positively Delicious</p>
+                <p>&copy; Positively Delicious 2023</p>
             </div>
         </div>
     </footer>
