@@ -1,4 +1,5 @@
 /* ******************* Basic Formatting ******************* */
+/* Keeps content centered and same width */
 .wrapper {
   padding: 24px;
 }
@@ -20,6 +21,7 @@ p, a {
   transition-duration: 0.3s;
 }
 
+/* Changes styling of button upon hover */
 .button:hover {
   background: #DC1F77;
   color: #ffffff;
@@ -42,10 +44,7 @@ h2 {
   padding-bottom: 12px;
 }
 
-main {
-  background-color: #FFCCE7;
-}
-
+/* To create spaces between sections */
 .spacer {
   background-color: white;
   padding: 30px;
@@ -56,6 +55,27 @@ main {
 /* ************************************************************************************************************ */
 
 /* ******************************************** HEADER ******************************************** */
+
+/* Skip links to improve accessibility for screen reader users */
+.skip-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+.skip-links a {
+  padding: 1rem;
+  background: #DC1F77;
+  position: absolute;
+  color: white;
+}
+
+/* Shows skip link when focused on */
+.skip-links a:focus {
+  top: 110px;
+}
+
 .logo {
   display: inline-block;
   vertical-align: top;
@@ -65,10 +85,12 @@ main {
   transition: all .2s ease-in-out; 
 }
 
+/* Applies scale animation to logo */
 .logo:hover {
   transform: scale(1.2);
 }
 
+/* Makes navigation stick to top of page */
 .header {
   background-color: rgb(255, 255, 255);
   position: sticky;
@@ -76,6 +98,7 @@ main {
   width: 100%;
 }
 
+/* Hides navigation links */
 nav {
   width: 100%;
   height: 100%;
@@ -88,6 +111,7 @@ nav {
   transition: max-height .5s ease-out;
 }
 
+/* Stylizes hamburger menu links */
 nav ul {
   padding: 0px;
   margin: 0px;
@@ -97,6 +121,7 @@ nav ul {
   vertical-align:top;
 }
 
+/* Stylizes navigation links */
 nav ul li a {
   font-size: 1.75rem;
   text-decoration: none;
@@ -106,26 +131,28 @@ nav ul li a {
   transition: all .2s ease-in-out; 
 }
 
+/* Changes text color of navigation links upon hover */
 nav ul li a:hover {
   background-color: #DC1F77;
 }
 
-/* Menu Icon */
+/* Aligns hamburger menu icon to top right */
 .hamb {
   cursor: pointer;
   float: right;
   padding: 40px 25px;
-}/* Style label tag */
+}
 
+/* Styles label tag */
 .hamb-line {
   background: #EE589F;
   display: block;
   height: 2.5px;
   position: relative;
   width: 30px;
+} 
 
-} /* Style span tag */
-
+/* Styles span tag */
 .hamb-line::before,
 .hamb-line::after {
   background: #EE589F;
@@ -145,11 +172,12 @@ nav ul li a:hover {
   top: -10px;
 }
 
+/* Hides checkbox */
 .side-menu {
   display: none;
-} /* Hide checkbox */
+}
 
-/* Toggle menu icon */
+/* Toggles menu icon & hides hamburger icon lines */
 .side-menu:checked ~ nav {
   max-height: 100%;
 }
@@ -168,7 +196,7 @@ nav ul li a:hover {
   top:0;
 }
 
-/* Banner */
+/* Places hero image below heading text */
 .hero {
   height: 400px;
   background-image: url("../images/hero-image.jpg");
@@ -185,7 +213,10 @@ nav ul li a:hover {
 /* ******************************************** HOME PAGE: MAIN CONTENT ******************************************** */
 
 /* ******************* Call To Action Section ******************* */
+
+/* Stylizes and centers Call to Action section */
 .cta {
+  background-color: #FFCCE7;
   text-align: center;
   padding-top: 35px;
   padding-bottom: 35px;
@@ -195,10 +226,12 @@ nav ul li a:hover {
   font-size: 1.8rem;
 }
 
+/* Adds animation to Call to Action button */
 .cta a {
   animation: wiggle 2s linear 3.5s;
 }
 
+/* Rotates button to create wiggle effect */
 @keyframes wiggle {
   0%, 5% {
     transform: rotateZ(0);
@@ -227,25 +260,29 @@ nav ul li a:hover {
 }
 
 /* ******************* Gallery Section ******************* */
+
+/* Adds spacing and centers text */
 .gallery {
-  background-color: #ffa5d3;
   text-align: center;
   padding-top: 35px;
   padding-bottom: 25px;
 }
 
+/* Creates container to contain gallery images */
 .container {
   overflow: hidden;
-  border: 10px solid #ffffff;
+  border: 10px solid #DC1F77;
   border-radius: 8px;
 }
 
+/* Adds animation to transition between images */
 .carousel {
   display: flex;
   animation: slide 16s infinite;
   z-index: -1;
 }
 
+/* Translates images towards the left */
 @keyframes slide {
   0%{
       transform: translateX(0);
@@ -277,7 +314,7 @@ nav ul li a:hover {
   padding-bottom: 25px;
 }
 
-/*center the heading and lines*/
+/* Adds decorative heading lines to gallery heading */
 .pa-heading-line-both h2 {
 	display: flex;
 	width: 100%;
@@ -285,7 +322,8 @@ nav ul li a:hover {
 	align-items: center;
 	text-align: center;
 }
-/*add and adjust the lines*/
+
+/* Adjusts and stylizes lines */
 .pa-heading-line-both h2:before,
 .pa-heading-line-both h2:after {
 	content: '';
@@ -294,17 +332,36 @@ nav ul li a:hover {
 	flex: 1 0 20px;
 	color: #DC1F77;
 }
-/*add spacing between heading and lines*/
+
+/* Adds spacing between heading and lines */
 .pa-heading-line-both h2:after {
 	margin: 0 0 0 20px;
 }
 
+/* Fits gallery images to container */
 .gallery img {
   width: 100%;
   height: 100%;
 }
 
+/* Stylizes gallery button */
+.gallery a {
+  display: inline-block;
+  background-color: #DC1F77;
+  color: #ffffff;
+  margin-top: 25px;
+  transition-duration: 0.3s;
+}
+
+/* Changes style of gallery button upon hover */
+.gallery a:hover {
+  background: #fe78b7;
+  color: #ffffff;
+}
+
 /* ******************* Our Cakeries Section ******************* */
+
+/* Adds spacing and stylizes section */
 .our-cakeries {
   background-color:#edbcf5;
   padding-top: 20px;
@@ -314,62 +371,71 @@ nav ul li a:hover {
   padding: 30px 25px 0px 25px;
 }
 
+/* Centers and adds spacing to button */
 .our-cakeries-button {
   padding: 0px 25px 30px 25px;
   text-align: center;
 }
 
+/* Stylizes heading */
 .our-cakeries h2 {
   color: #a638b9;
   text-align: center;
 }
 
+/* Fits image to container & rounds corners */
 .our-cakeries img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  border: 10px solid #ffffff;
   border-radius: 8px;
 }
 
 /* ******************* Say Hello Section ******************* */
+
+/* Adds spacing and stylizes section */
 .say-hello {
   padding-top: 20px;
-  background-color: #f5e9ae;
+  background-color: #f2e397;
 }
 
 .say-hello-text {
   padding: 30px 25px 0px 25px;
 }
 
+/* Centers and adds spacing to button */
 .say-hello-button {
   padding: 0px 25px 30px 25px;
   text-align: center;
 }
 
+/* Centers heading */
 .say-hello h2 {
   text-align: center;
 }
 
+/* Fits image to container & rounds corners */
 .say-hello img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  border: 10px solid #ffffff;
   border-radius: 8px;
 }
 
 /* ******************************************** ABOUT PAGE: MAIN CONTENT ******************************************** */
 
 /* ******************* Our Story Section ******************* */
+
+/* Centers and stylizes section */
 .our-story {
   text-align: center;
   padding-bottom: 60px;
-  background-color: #f5e9ae;
+  background-color: #f2e397;
 }
 
+/* Stylizes heading */
 .our-story h1 {
   color: #DC1F77;
   font-size: 5rem;
@@ -377,14 +443,23 @@ nav ul li a:hover {
 }
 
 /* ******************* Founder Section ******************* */
+
+/* Centers and stylizes section */
 .founder {
+  background-color: #FFCCE7;
   text-align: center;
 }
 
+/* Adds spacing between heading and image */
 .founder h2 {
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
+.founder p {
+  padding: 5px 20px 20px 20px;
+}
+
+/* Fits image to container */
 .founder img {
   display: block;
   margin-left: auto;
@@ -392,21 +467,28 @@ nav ul li a:hover {
   width: 100%;
   height: 500px;
   object-fit: cover;
-  border: 10px solid #ffffff;
   border-radius: 8px;
 }
 
 /* ******************* Mission Section ******************* */
+
+/* Centers and stylizes section */
 .mission {
   text-align: center;
   background-color: #edbcf5;
 }
 
+/* Adds spacing between heading and image */
 .mission h2 {
-  padding-top: 20px;
+  padding-top: 25px;
   color: #a638b9;
 }
 
+.mission p {
+  padding: 5px 20px 20px 20px;
+}
+
+/* Fits image to container */
 .mission img {
   display: block;
   margin-left: auto;
@@ -414,24 +496,28 @@ nav ul li a:hover {
   width: 100%;
   height: 500px;
   object-fit: cover;
-  border: 10px solid #ffffff;
   border-radius: 8px;
 }
 
 /* ******************************************** CONTACT PAGE: MAIN CONTENT ******************************************** */
 
 /* ******************* Contact Info Card ******************* */
+
+/* Stylizes and centers section */
 .contact-info {
+  background-color: #FFCCE7;
   text-align: center;
   padding-top: 50px;
 }
 
+/* Stylizes icons */
 .contact-options i {
   font-size: 4rem;
   padding: 10px;
   color: #DC1F77;
 }
 
+/* Stylizes contact information text */
 .contact-options li {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
@@ -441,6 +527,7 @@ nav ul li a:hover {
   padding-bottom: 20px;
 }
 
+/* Fits Google Maps widget to container */
 iframe {
   border-radius: 10px;
   width: 100%;
@@ -448,21 +535,26 @@ iframe {
 }
 
 /* ******************* Contact Form ******************* */
+
 .contact-form {
   background-color: #edbcf5;
 }
 
+/* Adds spacing and stylizes heading */
 .contact-form h2 {
   color: #a638b9;
   padding: 10px 0 25px 0;
+  text-align: center;
 }
 
+/* Stylizes contact form text */
 .contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.1rem;
   line-height: 1.5rem;
 }
 
+/* Changes width and height of contact form inputs */
 .contact-form input, .contact-form textarea {
   width: 100%;
   padding: 5px;
@@ -471,6 +563,7 @@ iframe {
   border-radius: 8px;
 }
 
+/* Stylizes submit button */
 .contact-form button {
   background-color: #DC1F77;
   color: #ffffff;
@@ -486,6 +579,7 @@ footer {
   background-color: #DC1F77;
 }
 
+/* Fits logo to container */
 footer img {
   display: block;
   margin-left: auto;
@@ -499,11 +593,13 @@ footer p, a {
   text-decoration: none;
 }
 
+/* Aligns social media icons to bottom right of footer */
 .footer-socials {
   float: right;
   display: inline;
 }
 
+/* Stylizes footer links */
 .footer-socials a {
   text-align: center;
   color: white;
@@ -515,33 +611,53 @@ footer p, a {
 /* ************************************************************************************************************* */
 /* ********************************************** DESKTOP VERSION ********************************************** */
 /* ************************************************************************************************************* */
+
+/* ******************* Basic Formatting ******************* */
 @media (min-width: 768px) {
+  /* Keeps content centered and same width */
   .wrapper {
     max-width: 100%;
     padding-left: 200px;
     padding-right: 200px;
   }
 
-    /* ******** Header ******** */
-    /* Banner */
+  p, a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+  }
+
+  h2 {
+    font-size: 4.75rem;
+  }
+
+.button {
+  margin-top: 15px;
+  padding: 20px 28px 16px 28px;
+  border-radius: 100px;
+  font-size: 1.45rem;
+}
+
+    /* ******************************************** HEADER ******************************************** */
+
+    /* ******************* Banner ******************* */
   .hero {
     height: 900px;
-    background-image: url("../images/hero-image.jpg");
-    background-size: cover;
   }
 
   .hero h1 {
-    font-size: 7.5rem;
-    padding: 150px;
+    font-size: 6rem;
+    padding: 170px;
   }
   
-  /* Logo */
   .logo {
-    width: 4%;
-    height: 4%;
+    width: 3%;
+    height: 3%;
   }
 
-  /* Navigation */
+ /* ******************* Navigation ******************* */
+
+ /* Aligns navigation links to top right of nav */
   nav {
     max-height: none;
     top: 0;
@@ -551,35 +667,246 @@ footer p, a {
     background-color: transparent;
   }
   
+  /* Horizontally aligns navigation links */
   nav ul li {
     float: left;
   }
   
+  /* Stylizes navigation links */
   nav ul li a {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     text-decoration: none;
     display: block;
-    padding: 30px;
+    padding: 5%, 10%;
     color: black;
   }
   
+  /* Changes style of navigation links upon hover */
   nav ul li a:hover {
     background-color: transparent;
+    color:#DC1F77;
   }
   
-  /* Menu Icon */
+  /* Hides hamburger menu icon */
   .hamb{
     display: none;
   }
 
-  /* ******** Main Content ******** */
-  h2 {
-    font-size: 3rem;
-  }
+/* ******************************************** HOME PAGE: MAIN CONTENT ******************************************** */
 
-  /* ******** Footer ******** */
-  footer img {
-    width: 20%;
-    height: 20%;
+/* ******************* Call to Action Section ******************* */
+.cta {
+  padding: 50px 0 50px 0;
+}
+
+.cta h2 {
+  font-size: 2.75rem;
+}
+
+/* ******************* Gallery Section ******************* */
+.gallery img {
+  width: 33.33%;
+}
+
+@keyframes slide {
+  0%{
+      transform: translateX(0);
+  }
+  25%{
+      transform: translateX(0);
+  }
+  30%{
+      transform: translateX(-33.33%);
+  }
+  50%{
+      transform: translateX(-33.33%);
+  }
+  55%{
+      transform: translateX(-66.66%);
+  }
+  75%{
+      transform: translateX(-66.66%);
+  }
+  80%{
+      transform: translateX(-99.99%);
+  }
+  90%{
+      transform: translateX(-99.99%);
+  }
+  100%{
+    transform: translateX(0);
   }
 }
+
+/* ******************* Our Cakeries Section ******************* */
+
+/* Turns container to flexbox */
+  .our-cakeries {
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 8px;
+  }
+
+/* Makes image responsive */
+  .our-cakeries img {
+    object-fit: cover;
+    width: 50%;
+    border: none;
+    float: left;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .our-cakeries-text {
+    text-align: center;
+    align-self: center;
+    width: 40%;
+    padding-right: 4%;
+    float: right;
+  }
+
+  .our-cakeries-text p {
+    padding: 15px 0 15px 0;
+  }
+
+  /* ******************* Say Hello Section ******************* */
+  
+  /* Turns container to flexbox */
+  .say-hello {
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 8px;
+  }
+
+  /* Makes image responsive */
+  .say-hello img {
+    object-fit: cover;
+    width: 50%;
+    border: none;
+    float: left;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .say-hello-text {
+    text-align: center;
+    align-self: center;
+    width: 40%;
+    padding-right: 4%;
+    float: left;
+  }
+
+  .say-hello p {
+    padding: 15px 0 15px 0;
+  }
+
+  /* ******************************************** ABOUT PAGE: MAIN CONTENT ******************************************** */
+  
+  /* ******************* Our Story Section ******************* */
+
+  .our-story {
+    padding: 40px 0 75px 0;
+  }
+  
+  .our-story p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ******************* Founder Section ******************* */
+
+    /* Turns container to flexbox */
+  .founder {
+    width: 80%;
+    max-width: 100%;
+    height: 100%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 8px;
+  }
+
+    /* Makes image responsive */
+  .founder img {
+    object-fit: cover;
+    width: 50%;
+    border: none;
+    float: right;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .founder-text {
+    text-align: center;
+    align-self: center;
+    width: 40%;
+    padding-right: 4%;
+    float: left;
+  }
+
+  .founder p {
+    padding: 15px 0 15px 0;
+  }
+
+  /* ******************* Mission Section ******************* */
+
+  /* Turns container to flexbox */
+  .mission {
+    width: 80%;
+    max-width: 100%;
+    height: 100%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 8px;
+  }
+
+  /* Makes image responsive */
+  .mission img {
+    object-fit: cover;
+    width: 50%;
+    border: none;
+    float: left;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .mission-text {
+    text-align: center;
+    align-self: center;
+    width: 40%;
+    padding-right: 4%;
+    float: right;
+  }
+
+  .mission p {
+    padding: 15px 0 15px 0;
+  }
+  
+  /* ******************************************** FOOTER ******************************************** */
+  .footer {
+    padding: 15px;
+  }
+
+  /* Resizes footer image */
+  footer img {
+    width: 25%;
+  }
+} 
