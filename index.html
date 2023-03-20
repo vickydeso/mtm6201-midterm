@@ -19,88 +19,103 @@
     <title>Midterm</title>
 </head>
 <body>
-    <header>
+    <!-- Banner -->
+    <header role="banner">
+        <!-- Skip links for accessibility -->
+        <ul class="skip-links">
+            <li><a href="#nav">Skip to navigation</a></li>
+            <li><a href="#main">Skip to main content</a></li>
+            <li><a href="#footer">Skip to footer</a></li>
+        </ul>
+        <!-- Header -->
         <div class="header">
             <!-- Logo -->
-            <a href="index.html"><img class="logo" src="images/logo.png" alt="Positively Delicious logo"></a>
-
+            <a href="index.html" aria-label="Go to homepage"><img class="logo" src="images/logo.png" alt="Positively Delicious logo"></a>
             <!-- Hamburger icon -->
-            <input class="side-menu" type="checkbox" id="side-menu"/>
-            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-            <!-- Mobile Menu -->
-            <nav class="nav">
+            <input class="side-menu" type="checkbox" id="side-menu">
+            <label class="hamb" for="side-menu" role="menu"><span class="hamb-line"></span></label>
+            <!-- Navigation -->
+            <nav class="nav" id="nav" role="navigation">
                 <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="index.html" role="menuitem" aria-label="Go to homepage">Home</a></li>
+                    <li><a href="about.html" role="menuitem" aria-label="Go to about page">About</a></li>
+                    <li><a href="contact.html" role="menuitem" aria-label="Go to contact page">Contact</a></li>
+                    <li><a href="#" role="menuitem" aria-label="Go to shopping cart"><i class="fa fa-shopping-bag"></i></a></li>
                 </ul>
             </nav>
         </div>
+        <!-- Hero image & text -->
         <div class="hero">
         <h1>Give<br> into your<br>cravings.</h1>
         </div>
     </header>
 
     <!-- Main content -->
-    <main>
+    <main id="main" role="main">
+        <!-- Call to Action section -->
         <div class="cta wrapper">
             <h2>What flavor profile would best suit you?</h2>
             <p>Based on your personality type, mood, and flavor preferences, we'll assign you a cake tailored just for you!</p>
-            <a class="button" href="#"z>Take the test <i class="fa fa-angle-right"></i></a>
+            <a class="button" role="link" href="#" aria-label="Go to flavor profile test">Take the test <i class="fa fa-angle-right"></i></a>
         </div>
         <div class="spacer"></div>
+        <!-- Gallery section -->
         <div class="gallery wrapper pa-heading-line-both">
             <h2>Gallery</h2>
+            <!-- Image slideshow -->
             <div class="container">
                 <div class="carousel">
-                    <img src="images/gallery-1.jpg" alt="Oreo cake">
-                    <img src="images/gallery-2.jpg" alt="Travel-themed birthday cake">
-                    <img src="images/gallery-3.jpg" alt="Dreamy-themed birthday cake">
-                    <img src="images/gallery-4.jpg" alt="Underwater-themed birthday cake">
+                    <img src="images/gallery-1.jpg" alt="Oreo cake" role="img">
+                    <img src="images/gallery-2.jpg" alt="Travel-themed cake" role="img">
+                    <img src="images/gallery-3.jpg" alt="Dreamy-themed cake" role="img">
+                    <img src="images/gallery-4.jpg" alt="Underwater-themed cake" role="img">
+                    <img src="images/gallery-5.jpg" alt="Jungle-themed cake" role="img">
+                    <img src="images/gallery-6.jpg" alt="Pink bear cake" role="img">
                 </div>
             </div>
-                <a class="button" href="#">Check out our sweets</a>
+                <a class="button" href="about.html" role="link" aria-label="Go to products page">Check out our sweets</a>
         </div>
         <div class="spacer"></div>
+        <!-- Our Cakeries card -->
         <div class="our-cakeries">
-            <img src="images/our-cakeries.jpg" alt="Cupcake platters aligned on counter">
+            <img src="images/our-cakeries.jpg" alt="Cupcake platters aligned on counter" role="img">
             <div class="our-cakeries-text">
                 <h2>Our Cakeries</h2>
                 <p>We're proud to serve you at multiple locations so you can find a bakery near you to satisfy your sweet tooth. We're always ready to help you craft the perfect cake for any occasion. Be sure to stop by one of our locations and experience our Positively Delicious taste!
                 </p>
-            </div>
-            <div class="our-cakeries-button">
-                <a class="button" href="#">Find a bakery</a>
+                <div class="our-cakeries-button">
+                    <a class="button" href="contact.html" role="link" aria-label="Go to location page">Find a bakery</a>
+                </div>
             </div>
         </div>
         <div class="spacer"></div>
+        <!-- Say Hello card -->
         <div class="say-hello">
-            <img src="images/say-hello.jpg" alt="Person placing macarons on top of cake">
+            <img src="images/say-hello.jpg" alt="Person placing macarons on top of cake" role="img">
             <div class="say-hello-text">
                 <h2>Say Hello</h2>
                 <p>In the mood for something sweet? We'd love to make your next event special with something Positively Delicious. Whether you're looking for a classic birthday cake or a unique cupcake assortment, we've got you covered.</p>
-            </div>
-            <div class="say-hello-button">
-                <a class="button" href="#">Contact us</a>
+                <div class="say-hello-button">
+                <a class="button" href="contact.html" role="link" aria-label="Go to contact page">Contact us</a>
             </div>
         </div>
-        <div class="spacer"></div>
     </main>
 
+    <div class="spacer"></div>
     <!-- Footer -->
-    <footer>
-        <div class="wrapper">
-            <img src="images/footer-logo.png" alt="Positively Delicious logo and slogan">
-            <!-- Social Media Icons -->
+    <footer id="footer" role="contentinfo">
+        <div class="footer">
+            <img src="images/footer-logo.png" alt="Positively Delicious logo and slogan" role="img">
+            <!-- Social media icons -->
             <div class="footer-socials">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-youtube-play"></a>
+                <a href="#" class="fa fa-facebook" role="link" aria-label="Go to Facebook page"></a>
+                <a href="#" class="fa fa-twitter" role="link" aria-label="Go to Twitter page"></a>
+                <a href="#" class="fa fa-instagram" role="link" aria-label="Go to Instagram page"></a>
+                <a href="#" class="fa fa-youtube-play" role="link" aria-label="Go to YouTube channel"></a>
             </div>
+            <!-- Footer links -->
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
+                <a href="#" role="link" aria-label="See Privacy Policy page">Privacy Policy</a>
                 <p>&copy; Positively Delicious</p>
             </div>
         </div>

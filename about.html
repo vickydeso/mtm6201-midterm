@@ -19,43 +19,52 @@
     <title>About</title>
 </head>
 <body>
-    <header>
+    <!-- Banner -->
+    <header role="banner">
+        <!-- Skip links for accessibility -->
+        <ul class="skip-links">
+            <li><a href="#nav">Skip to navigation</a></li>
+            <li><a href="#main">Skip to main content</a></li>
+            <li><a href="#footer">Skip to footer</a></li>
+        </ul>
+        <!-- Header -->
         <div class="header">
             <!-- Logo -->
-            <a href="index.html"><img class="logo" src="images/logo.png" alt="Positively Delicious logo"></a>
-
+            <a href="index.html" aria-label="Go to homepage"><img class="logo" src="images/logo.png" alt="Positively Delicious logo"></a>
             <!-- Hamburger icon -->
-            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <input class="side-menu" type="checkbox" id="side-menu">
             <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-            <!-- Mobile Menu -->
-            <nav class="nav">
+            <!-- Navigation -->
+            <nav class="nav" id="nav" role="navigation">
                 <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="index.html" role="menuitem" aria-label="Go to homepage">Home</a></li>
+                    <li><a href="about.html" role="menuitem" aria-label="Go to about page">About</a></li>
+                    <li><a href="contact.html" role="menuitem" aria-label="Go to contact page">Contact</a></li>
+                    <li><a href="#" role="menuitem" aria-label="Go to shopping cart"><i class="fa fa-shopping-bag"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Main content -->
-    <main>
+    <main id="main" role="main">
         <div class="our-story wrapper">
             <h1>Our Story</h1>
             <p>At Positively Delicious, we believe that every occasion deserves a sweet treat. Our story began with a simple passion for baking and a desire to share it with the world. We started out in a small kitchen, perfecting our recipes and sharing our creations with friends and family. As word spread, our business grew, and we opened our first bakery. Today, we continue to delight our customers with our freshly baked cakes, cupcakes, and desserts.</p>
         </div>
         <div class="spacer"></div>
+        <!-- Founder card -->
         <div class="founder wrapper">
-            <img src="images/founder.jpg" alt="Woman in kitchen holding whisk with batter">
+            <img src="images/founder.jpg" alt="Woman in kitchen holding whisk with batter" role="img">
             <div class="founder-text">
                 <h2>Founder</h2>
                 <p>Positively Delicious was founded by Lydia Ware, a talented baker with a lifelong passion for all things sweet. Lydia grew up baking with her grandmother and learned the secrets to making the perfect cake. She went on to study pastry arts and honed her skills in some of the best bakeries in the country. With a keen eye for detail and a commitment to using only the finest ingredients, Lydia has built a reputation for creating some of the most delicious cakes around.</p>
             </div>
         </div>
         <div class="spacer"></div>
+        <!-- Mission card -->
         <div class="mission wrapper">
-            <img src="images/mission.jpg" alt="Laughing woman holding 50th birthday cake">
+            <img src="images/mission.jpg" alt="Laughing woman holding 50th birthday cake" role="img">
             <div class="mission-text">
                 <h2>Mission</h2>
                 <p>Our mission at Positively Delicious is simple: to make the world a more positive place, one delicious cake at a time. We believe that everyone deserves to indulge in something delicious and that our cakes can bring joy to any occasion. Whether it's a birthday, a wedding, or just a Tuesday, our cakes are the perfect way to celebrate.</p>
@@ -65,18 +74,19 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="wrapper">
-            <img src="images/footer-logo.png" alt="Positively Delicious logo and slogan">
-            <!-- Social Media Icons -->
+    <footer id="footer" role="contentinfo">
+        <div class="footer">
+            <img src="images/footer-logo.png" alt="Positively Delicious logo and slogan" role="img">
+            <!-- Social media icons -->
             <div class="footer-socials">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-youtube-play"></a>
+                <a href="#" class="fa fa-facebook" role="link" aria-label="Go to Facebook page"></a>
+                <a href="#" class="fa fa-twitter" role="link" aria-label="Go to Twitter page"></a>
+                <a href="#" class="fa fa-instagram" role="link" aria-label="Go to Instagram page"></a>
+                <a href="#" class="fa fa-youtube-play" role="link" aria-label="Go to YouTube channel"></a>
             </div>
+            <!-- Footer links -->
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
+                <a href="#" role="link" aria-label="See Privacy Policy page">Privacy Policy</a>
                 <p>&copy; Positively Delicious</p>
             </div>
         </div>

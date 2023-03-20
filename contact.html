@@ -19,77 +19,90 @@
     <title>About</title>
 </head>
 <body>
-    <header>
+    <!-- Banner -->
+    <header role="banner">
+        <!-- Skip links for accessibility -->
+        <ul class="skip-links">
+            <li><a href="#nav">Skip to navigation</a></li>
+            <li><a href="#main">Skip to main content</a></li>
+            <li><a href="#footer">Skip to footer</a></li>
+        </ul>
+        <!-- Header -->
         <div class="header">
             <!-- Logo -->
-            <a href="index.html"><img class="logo" src="images/logo.png" alt="Positively Delicious logo"></a>
-
+            <a href="index.html" aria-label="Go to homepage"><img class="logo" src="images/logo.png" alt="Positively Delicious logo"></a>
             <!-- Hamburger icon -->
-            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <input class="side-menu" type="checkbox" id="side-menu">
             <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-            <!-- Mobile Menu -->
-            <nav class="nav">
+            <!-- Navigation -->
+            <nav class="nav" id="nav" role="navigation">
                 <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="index.html" role="menuitem" aria-label="Go to homepage">Home</a></li>
+                    <li><a href="about.html" role="menuitem" aria-label="Go to about page">About</a></li>
+                    <li><a href="contact.html" role="menuitem" aria-label="Go to contact page">Contact</a></li>
+                    <li><a href="#" role="menuitem" aria-label="Go to shopping cart"><i class="fa fa-shopping-bag"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Main content -->
-    <main>
+    <main id="main" role="main">
+        <!-- Contact section -->
         <div class="contact-info wrapper">
             <h2>Where to Find Us</h2>
+            <!-- List with contact information -->
             <div class="contact-options">
                 <ul>
-                    <i class="fa fa-map-pin"></i><li>123 Sweet Street, Positivity Plaza, Sprinkleville, ON M5V 2M5</li>
-                    <i class="fa fa-phone"></i><li>416-555-1234</li>
-                    <i class="fa fa-envelope"></i><li>hello@positivelydelicious.ca</li>
+                    <li><i class="fa fa-map-pin"></i>123 Sweet Street, Positivity Plaza, Sprinkleville, ON M5V 2M5</li>
+                    <li><i class="fa fa-phone"></i>416-555-1234</li>
+                    <li><i class="fa fa-envelope"></i>hello@positivelydelicious.ca</li>
                 </ul>
             </div>
+            <!-- Google Maps address -->
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.9445518045054!2d-75.75712548447288!3d45.34993154908198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1679224686208!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.9445518045054!2d-75.75712548447288!3d45.34993154908198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1679224686208!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Location marker"></iframe>
             </div>
         </div>
         <div class="spacer"></div>
+        <!-- Contact form -->
         <div class="contact-form wrapper">
             <h2>Get in Touch!</h2>
-            <form action="submit-form.php" method="post">
+            <form action="submit-form.php" method="post" role="form" aria-label="Contact information">
+                <!-- Name input -->
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-              
+                <input type="text" id="name" name="name" role="text" aria-label="Your name" required>
+              <!-- Email input -->
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-              
+                <input type="email" id="email" name="email" role="text" aria-label="Your email" required>
+              <!-- Phone number input -->
                 <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone">
-              
+                <input type="tel" id="phone" name="phone" role="text" aria-label="Your phone number">
+              <!-- Message box -->
                 <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-              
-                <button type="submit">Submit</button>
+                <textarea id="message" name="message" role="textbox" aria-label="Your message" required></textarea>
+              <!-- Submit button -->
+                <button type="submit" role="button" aria-label="Submits contact information">Submit</button>
               </form>
         </div>
         <div class="spacer"></div>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="wrapper">
-            <img src="images/footer-logo.png" alt="Positively Delicious logo and slogan">
-            <!-- Social Media Icons -->
+    <footer id="footer" role="contentinfo">
+        <div class="footer">
+            <img src="images/footer-logo.png" alt="Positively Delicious logo and slogan" role="img">
+            <!-- Social media icons -->
             <div class="footer-socials">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-youtube-play"></a>
+                <a href="#" class="fa fa-facebook" role="link" aria-label="Go to Facebook page"></a>
+                <a href="#" class="fa fa-twitter" role="link" aria-label="Go to Twitter page"></a>
+                <a href="#" class="fa fa-instagram" role="link" aria-label="Go to Instagram page"></a>
+                <a href="#" class="fa fa-youtube-play" role="link" aria-label="Go to YouTube channel"></a>
             </div>
+            <!-- Footer links -->
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <p>&copy; Positively Delicious 2023</p>
+                <a href="#" role="link" aria-label="See Privacy Policy page">Privacy Policy</a>
+                <p>&copy; Positively Delicious</p>
             </div>
         </div>
     </footer>
